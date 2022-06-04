@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block htmltitle %}
+{{ page.title }}
+{% endblock htmltitle %}
+
+{% block title %}
+{{ page.title }}
+{% endblock title %}
+
+{% block meta_tags %}
+{% if page.title %}
+<meta property="og:title" content="{{page.title}} - flyingcakes"/>
+<meta property="og:site_name" content="Mellow Clamour - flyingcakes"/>
+<meta property="og:url" content="{{ page.permalink | safe }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image"
+      content="https://files.snehit.dev/45161925_3928df08e7_k.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="snehit.dev"/>
+<meta property="twitter:url" content="{{ page.permalink | safe }}"/>
+<meta name="twitter:title" content="{{page.title}} - flyingcakes"/>
+<meta name="twitter:image"
+      content="https://files.snehit.dev/45161925_3928df08e7_k.jpg"/>
+{% else %}
+<meta property="og:title" content="Mellow Clamour - flyingcakes"/>
+<meta property="og:site_name" content="Mellow Clamour - flyingcakes"/>
+<meta property="og:url" content="{{ page.permalink | safe }}"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image"
+      content="https://files.snehit.dev/45161925_3928df08e7_k.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content="snehit.dev"/>
+<meta property="twitter:url" content="{{ page.permalink | safe }}"/>
+<meta name="twitter:title" content="Mellow Clamour - flyingcakes"/>
+<meta name="twitter:image"
+      content="https://files.snehit.dev/45161925_3928df08e7_k.jpg"/>
+{% endif %}
+{% if page.summary %}
+<meta property="og:description" content="{{ page.summary }}"/>
+<meta name="twitter:description" content="{{ page.summary }}"/>
+<meta name="description" content="{{ page.summary }}"/>
+{% endif %}
+{% endblock meta_tags %}
+
+{% block content %}
+{% if not page.extra.no_header %}
+{% if page.date %}
+{{ macros::format_date(date=page.date) }}
+{% endif %}
+{% if config.extra.show_word_count and not page.extra.hide_word_count %}
+{% if page.date %}
+&#183; {{ page.word_count }} words
+{% else %}
+{{ page.word_count }} words
+{% endif %}
+{% endif %}
+{% if config.extra.show_reading_time and not page.extra.hide_reading_time %}
+{% set previous = config.extra.show_word_count and not page.extra.hide_word_count %}
+{% if previous or page.date %}
+&#183; {{ page.reading_time }} min
+{% else %}
+{{ page.reading_time }} min
+{% endif %}
+{% endif %}
+{% if page.taxonomies.tags %}
+
+<div class="tag-container">
+    Tags :&nbsp;
+    {% for tag in page.taxonomies.tags %}
+    <span class="tag">
+                        <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">
+                            {{ tag }}
+                        </a>
+                    </span>
+    {% endfor %}
+</div>
+{% endif %}
+{% if page.taxonomies.authors %}
+
+<div class="tag-container">
+    Authors :&nbsp;
+    {% for author in page.taxonomies.authors %}
+    <span class="tag">
+                        <a href="{{ get_taxonomy_url(kind='authors', name=author) }}">
+                            {{ author }}
+                        </a>
+                    </span>
+    {% endfor %}
+</div>
+{% endif %}
+<hr/>
+{% endif %}
+{{ page.content | safe }}
+{% endblock content %}

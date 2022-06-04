@@ -1,0 +1,217 @@
+#splash
+  padding-top: 20vh
+  padding-bottom: 10vh
+  margin: auto 0
+  //height: 100vh
+  width: 45%
+  overflow: hidden
+  @media screen and (max-width: 736px)
+    width: 90%
+
+.big-link
+  font-family: $font
+  font-size: 2rem
+  font-weight: 300
+  margin-bottom: 1.6rem
+  line-height: 1.5em
+  @media screen and (max-width: 736px)
+    font-size: 3.5vh
+
+#title
+  margin-top: 3rem
+  font-family: $font
+  font-size: 2rem
+  line-height: 3rem
+  color: $pink-bright
+
+#content
+  margin: 2rem 0
+  line-height: 2em
+  letter-spacing: 2px
+
+  div
+    width: 100%
+    height: 100%
+    margin-bottom: 1em
+
+  & h1, h2, h3
+    margin: 1em 0
+    text-align: left
+
+  & p
+    margin-bottom: 1em
+    line-height: 1.8
+    letter-spacing: 1.5px
+    opacity: 0.9
+
+  & .highlight
+    width: 100%
+
+  & pre
+    line-height: 2rem
+    border-radius: 3px
+    padding: 1rem
+    overflow-x: auto
+    background-color: $code-block
+    width: 100%
+    margin-bottom: 1em
+    border: 1px solid $pink-base
+
+  & pre > code
+    border: none
+
+  & code
+    font-size: 0.9rem
+    font-family: 'Source Code Pro', monospace
+    padding: 0.1rem
+    border-radius: 3px
+    border: 1px solid $links
+
+  & img
+    width: 100%
+    max-width: 100%
+    display: block
+    margin: 2rem auto
+    opacity: 1
+
+  & blockquote
+    background-color: transparent
+    color: $dark-grey
+    padding: 2rem
+    margin: 2rem 1rem 2rem 1rem
+    border-radius: 8px
+    border: 1px solid $pink-bright
+
+    a
+      color: $black
+
+    & ul
+      margin-top: 1rem
+
+    & li
+      list-style: disc
+
+  & table
+    width: 100%
+    border-collapse: collapse
+    margin: 1rem 0
+    overflow-x: auto
+
+    th
+      font-size: 0.9rem
+
+    td, th
+      padding: 2px 5px
+      text-align: center
+      border: 1px solid $links
+
+  & li
+    line-height: 2
+    padding-left: 0.4rem
+
+    &:last-child
+      margin-bottom: 1rem
+
+  & ul
+    list-style: disc outside
+    padding-left: 2rem
+
+  & ol
+    list-style: decimal outside
+    padding-left: 2rem
+
+  & .gist
+    width: 100%
+
+    td, th
+      text-align: left
+      border: 0
+
+    & .gist-meta
+      background-color: transparent
+      color: $body-text
+
+      & a
+        color: $body-text
+
+.tag
+  padding: 0.1em 1em
+  margin-right: 1em
+  opacity: 1
+  border-radius: 2px
+  box-shadow: 0 0 1px 1px $pink-base
+
+  & a
+    color: $pink-base
+    text-decoration: none
+    border: none
+
+
+#homepage-content
+  padding-left: 10vw
+
+  & h1, h2, h3
+    margin: 1em 0
+    text-align: left
+
+  ul
+    columns: 12
+
+  li
+    font-size: 4em
+
+  .row
+    display: flex
+
+  .column
+    width: 50%
+
+.grid
+  display: grid
+  grid-gap: 20px
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+  grid-auto-rows: 400px
+  @media screen and (max-width: 736px)
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
+
+.grid > div
+  background-color: transparent
+  overflow: hidden
+
+.grid > div > img
+  height: 100%
+  width: 100%
+  object-fit: cover
+  opacity: 1
+
+.grid > div > a > img
+  height: 100%
+  width: 100%
+  object-fit: cover
+  opacity: 1
+
+#intro
+  font-family: $font
+  display: inline-block
+  font-weight: 700
+  margin-bottom: 2rem
+  line-height: 1.5em
+  background: $pink-base
+  font-size: 3.5rem
+  margin-right: 22px
+  color: $base-black
+  padding: 10px 0.4em
+  @media screen and (max-width: 736px)
+    font-size: 5vh
+
+#subintro
+  font-family: $font
+  font-size: 1.6rem
+
+  margin-bottom: 2rem
+  line-height: 1.5em
+  @media screen and (max-width: 736px)
+    font-size: 1.1rem
+
+.pink-underline
+  text-decoration: underline $pink-bright

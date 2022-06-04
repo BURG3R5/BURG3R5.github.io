@@ -1,0 +1,26 @@
+base_url = "https://example.com"
+# theme = "sam"
+compile_sass = true
+build_search_index = false
+title = "Aditya Rajput | BURG3R5"
+generate_feed = true
+taxonomies = [
+    { name = "tags", feed = true }
+]
+
+[markdown]
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+[extra]
+homepage_links = [
+    { text = "about", link = "/about" },
+    { text = "email", link = "mailto:adiraj20072002@gmail.com" },
+    { text = "blog", link = "/blog" },
+    { text = "github", link = "https://github.com/BURG3R5" },
+    { text = "projects", link = "/#projects" },
+    { text = "linkedin", link = "https://linkedin.com/in/aditya-rajput-2072" },
+    { text = "skills", link = "/#skills" },
+]
+
+bottom_links = true

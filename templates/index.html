@@ -1,0 +1,75 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+
+    <link rel="stylesheet" href="{{ get_url(path='devicon.min.css') }}">
+    <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+
+    <title>{% block htmltitle %}{{ config.title }}{% endblock htmltitle %}</title>
+
+    {% block feed %}
+    {% if config.generate_feed %}
+    <link rel="alternate" type="application/atom+xml" title="Mellow Clamour - flyingcakes - atom"
+          href="{{ get_url(path='atom.xml') }}">
+    {% endif %}
+    {% endblock %}
+
+    {% block meta_tags %}
+    {% endblock meta_tags %}
+</head>
+<body>
+{% block body %}
+<div class="section" id="splash">
+    <div id="intro">
+        Aditya Rajput
+    </div>
+    <div id="subintro">
+        developer, author, student
+    </div>
+
+    <ul style="columns: 4;column-gap: 30px">
+        {% if config.extra.homepage_links %}
+        {% for link in config.extra.homepage_links %}
+        <li>
+            <div class="big-link">
+                <a href="{{ link.link }}">
+                    {{ link.text }}
+                </a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    {% for current in section.subsections %}
+    {% set current = get_section(path=current) %}
+    <div class="big-link">
+        <a href="{{ current.permalink }}">
+            {{ macros::title_or_last(component=current) }}
+        </a>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock body %}
+
+{% if section.extra.home_page %}
+{% block content %}
+<div style="align-self: center">
+    {{ section.extra.more_arrow | safe }}
+</div>
+<span style="align-self: start" id="homepage-content">
+{{ section.content | safe }}
+</span>
+{% endblock content %}
+{% endif %}
+</body>
+</html>
