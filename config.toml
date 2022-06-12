@@ -1,5 +1,4 @@
-base_url = "https://example.com"
-# theme = "sam"
+base_url = "https://BURG3R5.github.io/"
 compile_sass = true
 build_search_index = false
 title = "Aditya Rajput | BURG3R5"
