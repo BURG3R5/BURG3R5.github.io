@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://BURG3R5.github.io/</loc>
+    </url>
+    <url>
+        <loc>https://BURG3R5.github.io/about/</loc>
+    </url>
+    <url>
+        <loc>https://BURG3R5.github.io/blog/</loc>
+    </url>
+    <url>
+        <loc>https://BURG3R5.github.io/blog/gsoc/</loc>
+    </url>
+    <url>
+        <loc>https://BURG3R5.github.io/blog/gsoc/about-the-project/</loc>
+        <lastmod>2022-06-04</lastmod>
+    </url>
+    <url>
+        <loc>https://BURG3R5.github.io/blog/gsoc/introduction/</loc>
+        <lastmod>2022-06-03</lastmod>
+    </url>
+    <url>
+        <loc>https://BURG3R5.github.io/tags/</loc>
+    </url>
+    <url>
+        <loc>https://BURG3R5.github.io/tags/gsoc/</loc>
+    </url>
+    <url>
+        <loc>https://BURG3R5.github.io/tags/matrix/</loc>
+    </url>
+    <url>
+        <loc>https://BURG3R5.github.io/tags/python/</loc>
+    </url>
+</urlset>

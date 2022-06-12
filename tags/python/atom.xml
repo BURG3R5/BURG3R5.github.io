@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Aditya Rajput | BURG3R5 - python</title>
+	<link href="https://BURG3R5.github.io/tags/python/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://BURG3R5.github.io/"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-06-04T00:00:00+00:00</updated>
+	<id>https://BURG3R5.github.io/tags/python/atom.xml</id>
+	<entry xml:lang="en">
+		<title>About the Project</title>
+		<published>2022-06-04T00:00:00+00:00</published>
+		<updated>2022-06-04T00:00:00+00:00</updated>
+		<link href="https://BURG3R5.github.io/blog/gsoc/about-the-project/" type="text/html"/>
+		<id>https://BURG3R5.github.io/blog/gsoc/about-the-project/</id>
+		<content type="html">&lt;p&gt;In this project I will implement, in particular, the keyword search scheme outlined in a &lt;em&gt;Demertzis et al.&lt;&#x2F;em&gt; paper titled &lt;a href=&quot;http:&#x2F;&#x2F;idemertzis.com&#x2F;Papers&#x2F;sigmod17.pdf&quot;&gt;“Fast Searchable Encryption with Tunable Locality&amp;quot;&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I will achieve this by creating a Python library that exposes methods to create, update and search on encrypted indices stored in content repositories in a Matrix homeserver.&lt;&#x2F;p&gt;
+&lt;p&gt;As a part of the project, I will be demonstratively integrating the library into an existing Matrix client. Additionally, I will submit results of preliminary performance evaluation.&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;goals&quot;&gt;Goals&lt;&#x2F;h4&gt;
+&lt;p&gt;In this project I intend to:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Implement the keyword search SSE scheme outlined in the aforementioned &lt;em&gt;Demertzis et al.&lt;&#x2F;em&gt; paper. &lt;&#x2F;li&gt;
+&lt;li&gt;Create encrypted indices of a few public Matrix rooms. &lt;&#x2F;li&gt;
+&lt;li&gt;Implement an updation procedure for the above SSE i.e. provide a way to add new messages&#x2F;documents to the encrypted index. &lt;&#x2F;li&gt;
+&lt;li&gt;Integrate the project into a suitable client. &lt;&#x2F;li&gt;
+&lt;li&gt;Perform performance evaluation of the created library.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;deliverables&quot;&gt;Deliverables&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;A Python library that exposes methods to create, update and search on encrypted indices.&lt;&#x2F;li&gt;
+&lt;li&gt;Demonstrative integration into a suitable Matrix client. &lt;&#x2F;li&gt;
+&lt;li&gt;Complete documentation (comments and website) for the library and example codes. &lt;&#x2F;li&gt;
+&lt;li&gt;Preliminary performance analysis results. &lt;&#x2F;li&gt;
+&lt;li&gt;Weekly blogs on project progress. &lt;&#x2F;li&gt;
+&lt;li&gt;GSoC end project report.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;pre-gsoc-code&quot;&gt;Pre-GSoC Code&lt;&#x2F;h4&gt;
+&lt;p&gt;In order to understand the paper and the project idea in the best way possible, I implemented a sort of MVP of this project before writing my proposal for this project. It helped me gain much insight into the project idea and also helped me set milestones. The code is available &lt;a href=&quot;http:&#x2F;&#x2F;github.com&#x2F;BURG3R5&#x2F;sse-experiments&quot;&gt;here&lt;&#x2F;a&gt;. Included are tests, in which both keyword and phrase search are run over 500 messages exported from the official GSoC Matrix room (&lt;a href=&quot;http:&#x2F;&#x2F;matrix.to&#x2F;#&#x2F;#gsoc:matrix.org&quot;&gt;#gsoc:matrix.org&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
